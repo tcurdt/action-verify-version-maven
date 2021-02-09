@@ -13,7 +13,7 @@ function extractVersion(file) {
 
   const pom = parseStringSync(data)
 
-  const version = pom?.project?.version
+  const version = pom && pom.project && pom.project.version
 
   return version
 }
