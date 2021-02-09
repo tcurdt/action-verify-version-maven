@@ -23,3 +23,10 @@ jobs:
         uses: ./
         with:
           file: test/pom.xml
+        id: debug
+
+      - name: Env
+        run: env
+
+      - name: Output
+        run: echo "${{ steps.debug.outputs.version }}"
