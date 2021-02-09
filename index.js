@@ -1,9 +1,10 @@
 const core = require('@actions/core')
 const fs = require('fs')
+const xml2js = require('xml2js')
 
 function parseStringSync(str) {
   let result
-  new require('xml2js').Parser().parseString(str, (e, r) => { result = r })
+  new xml2js.Parser().parseString(str, (e, r) => { result = r })
   return result
 }
 
