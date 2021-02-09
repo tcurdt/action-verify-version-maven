@@ -40,9 +40,9 @@ try {
   const version_from_package = extractVersion(file)
   console.log(`version from pom: [${version_from_package}]`)
 
-  core.setOutput('version', version_from_package)
+  core.setOutput('version', '' + version_from_package)
 
-  if (ref.startsWith(prefix)) {
+  if (ref && ref.startsWith(prefix)) {
 
     const version_from_tag = ref.substring(prefix.length)
     console.log(`version from tag: [${version_from_tag}]`)
