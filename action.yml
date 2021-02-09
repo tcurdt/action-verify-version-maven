@@ -6,7 +6,6 @@ inputs:
   file:
     description: 'path to pom.xml'
     default: './pom.xml'
-
   prefix:
     description: 'tag prefix'
     default: 'refs/tags/v'
