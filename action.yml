@@ -1,0 +1,20 @@
+name: 'Verify Package Version (maven)'
+author: '@tcurdt'
+description: 'Check and extract current version from the pom and compare it to the current tag'
+
+inputs:
+  file:
+    description: 'path to pom.xml'
+    default: './pom.xml'
+
+  prefix:
+    description: 'tag prefix'
+    default: 'refs/tags/v'
+
+outputs:
+  version:
+    description: 'version extracted from file'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

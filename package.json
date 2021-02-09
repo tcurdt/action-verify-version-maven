@@ -1,0 +1,35 @@
+{
+  "name": "action-verify-version-maven",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "https://github.com/tcurdt/action-verify-version-maven",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcurdt/action-verify-version-maven.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tcurdt/action-verify-version-maven/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dist": "ncc build index.js -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "javascript",
+    "tag",
+    "version",
+    "maven"
+  ],
+  "author": "Torsten Curdt",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.27.0"
+  }
+}

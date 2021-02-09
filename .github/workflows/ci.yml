@@ -1,0 +1,25 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install
+        run: npm install
+
+      - name: Dist
+        run: npm run dist
+
+      - name: Env
+        run: env
+
+      - name: Integration Test
+        uses: ./
+        with:
+          file: test/pom.xml
