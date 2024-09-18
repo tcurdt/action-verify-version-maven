@@ -15,5 +15,5 @@ outputs:
     description: 'version extracted from file'
 
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
