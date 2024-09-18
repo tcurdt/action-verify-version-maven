@@ -12,7 +12,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "dist": "ncc build index.js -o dist",
+    "dist": "npx ncc build index.js -o dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -30,6 +30,6 @@
     "xml2js": "^0.6.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "0.38.1"
+    "@vercel/ncc": "^0.38.1"
   }
 }
