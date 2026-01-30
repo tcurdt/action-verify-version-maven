@@ -12,7 +12,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "dist": "npx ncc build index.js -o dist",
+    "dist": "npx esbuild index.js --bundle --platform=node --format=cjs --outfile=dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -27,9 +27,6 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^2.0.0",
-    "xml2js": "^0.6.0"
-  },
-  "devDependencies": {
-    "@vercel/ncc": "^0.38.1"
+    "xml2js": "^0.6.2"
   }
 }
